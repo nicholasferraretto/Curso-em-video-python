@@ -1,14 +1,17 @@
-a = float(input('Primeiro segmento: '))
-b = float(input('Segundo segmento: '))
-c = float(input('Terceiro segmento: '))
+a = int(input('Primeiro segmento: '))
+b = int(input('Segundo segmento: '))
+c = int(input('Terceiro segmento: '))
 
 if a < b + c and b < a + c and c < a + b:
-    print('Os segmentos acima podem formar um triângulo', end=' ')
+    forma = 'PODEM FORMAR'
     if a == b == c:
-        print('equilátero')
-    elif a != b != c != a:
-        print('escaleno')
+        tipo = 'EQUILÁTERO'
+    elif a != b != c and a != c:
+        tipo = 'ESCALENO'
     else:
-        print('isósceles')
+        tipo = 'ISÓSCELES'
 else:
-    print('Os segmentos acima não podem formar um triângulo')
+    forma = 'NÃO PODEM FORMAR'
+    tipo = ''
+
+print(f'Os segmentos acima {forma} um triângulo {tipo}')
