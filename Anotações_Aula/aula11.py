@@ -1,5 +1,10 @@
 # Cores no terminal
 
+# Sintaxe padrão
+'''
+\033[style;text;backm
+'''
+
 # 1
 print('\033[1;31;43mOlá, Mundo!\033[m')  # É necessário colocar a cor padrão após alterar
 print('\033[7;30mOlá, Mundo!\033[m')     # pois se não pintará td o código
