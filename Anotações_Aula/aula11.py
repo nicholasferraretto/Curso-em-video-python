@@ -1,8 +1,12 @@
-# Cores no terminal
+# Aula 11: Cores no terminal
 
 # Sintaxe padrão
 '''
 \033[style;text;backm
+     
+style: 0 (None), 1(Bold), 4(Underline), 7(Negative)
+Text: 30 ao 37
+Back: 40 ao 47
 '''
 
 # 1
@@ -14,11 +18,11 @@ a = 3
 b = 5
 print('Os valores são \033[1;33m{}\033[m e \033[1;31m{}\033[m!!!'.format(a, b))
 
-# 3(Ultilizando format)
+# 3 (Ultilizando format)
 nome = 'Nicholas'
 print('Olá ! Muito prazer em te conhecer, {}{}{}!!!'.format('\033[4;34m', nome, '\033[m'))
 
-# 4(Ultilizando dicionários)
+# 4 (Ultilizando dicionários)
 nome = 'Nicholas'
 cores = {'limpa': '\033[m',
          'azul': '\033[34m',
